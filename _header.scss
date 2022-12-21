@@ -1,0 +1,33 @@
+header{
+    background-color: $secon;
+    padding: 3vh 0vw;
+    nav{
+        ul{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10vw;
+            li{
+                a{
+                    color: #d9d9d9;
+                    text-transform: uppercase;
+                    text-decoration: none;
+                    font-family: 'Spectral SC', serif;
+                    font-weight: 700;
+                    &:hover{
+                        color: $contrast;
+                    }
+                }
+            }
+            #menu-item-20{
+                a{
+                    color:black;
+                    background-color: $contrast;
+                    padding: 3vh 2vw;
+                    font-family: 'Josefin Sans', sans-serif;
+                    font-size: 2.5vh;
+                }
+            }
+        }
+    }
+}
