@@ -14,12 +14,20 @@
 
 
                     <?php while ($recentPosts->have_posts()) : $recentPosts->the_post(); ?>
-                    <?php $totalcomments = get_comments_number(); ?>
+                    <?php $totalcomments = get_comments_number();
+                    $category = get_the_category(); ?>
 
                         <div class="card" style="background-image: url('<?php the_post_thumbnail_url() ?>')">
-                            <a href="<?php the_permalink() ?>"><?php the_title(); ?></a>
-                            <i class="fa-regular fa-calendar-days"></i><?php the_time('j F, Y'); ?>
-                            <span><i class="fa-solid fa-message"></i><?php echo $totalcomments; ?><span>
+                            <span class="category"><?php echo $category[0]->cat_name;; ?></span>
+                            <a href="<?php the_permalink() ?>" class="linkcard">
+                                <div class="contentText">
+                                <h2><?php the_title(); ?></h2>
+                                    <div class="flexInfo">
+                                        <i class="fa-regular fa-calendar-days"></i><?php the_time('j F, Y'); ?>
+                                        <span><i class="fa-solid fa-message"></i><?php echo $totalcomments; ?><span>
+                                    </div>
+                                </div>
+                            </a>
                         </div>
 
                     <?php endwhile; ?>
@@ -61,7 +69,7 @@
                         <?php $totalcomments = get_comments_number(); ?>
                             <div class="article">
                                 <img src="<?php the_post_thumbnail_url() ?>" class="img" alt="image des news">
-                                <h2><?php the_title(); ?></h2>
+                                <a href="<?php the_permalink() ?>"><?php the_title(); ?></a>
 
                                 <div class="flexInfo">
                                     <span></span>
@@ -75,6 +83,9 @@
                                 </div>
                             </div>
                         <?php endwhile; ?>
+                        <div class="morePost">
+                            <a href="<?php the_permalink(11) ?>">Plus d'articles...</a>
+                        </div>
                     </div>
                 </section>
                 <section class="guide">
@@ -100,7 +111,7 @@
                                 <span><?php echo $category[0]->cat_name;; ?></span>
                             </div>
                             <div class="information">
-                                <h2><?php the_title(); ?></h2>
+                                <a href="<?php the_permalink() ?>"><?php the_title(); ?></a>
                                 <div class="flexInfo">
                                     <i class="fa-regular fa-calendar-days"></i><p><?php the_time('j F, Y'); ?></p>
                                     <i class="fa-solid fa-message"></i><p><?php echo $totalcomments; ?></p>
@@ -111,6 +122,9 @@
                             </div>
                         </div>
                         <?php endwhile; ?>
+                        <div class="morePost">
+                            <a href="<?php the_permalink(9) ?>">Plus de guides...</a>
+                        </div>
                     </div>
                 </section>
             </div>
@@ -127,12 +141,20 @@
 
 
                     <?php while ($recentPosts->have_posts()) : $recentPosts->the_post(); ?>
-                    <?php $totalcomments = get_comments_number(); ?>
+                    <?php $totalcomments = get_comments_number();
+                    $category = get_the_category(); ?>
 
                         <div class="card" style="background-image: url('<?php the_post_thumbnail_url() ?>')">
-                            <a href="<?php the_permalink() ?>"><?php the_title(); ?></a>
-                            <i class="fa-regular fa-calendar-days"></i><?php the_time('j F, Y'); ?>
-                            <span><i class="fa-solid fa-message"></i><?php echo $totalcomments; ?><span>
+                            <span class="category"><?php echo $category[0]->cat_name;; ?></span>
+                            <a href="<?php the_permalink() ?>" class="linkcard">
+                                <div class="contentText">
+                                    <h2><?php the_title(); ?></h2>
+                                    <div class="flexInfo">
+                                        <i class="fa-regular fa-calendar-days"></i><?php the_time('j F, Y'); ?>
+                                        <span><i class="fa-solid fa-message"></i><?php echo $totalcomments; ?><span>
+                                    </div>
+                                </div>
+                            </a>
                         </div>
 
                     <?php endwhile; ?>
@@ -143,13 +165,16 @@
                         <h2>Token Prices</h2>
                     </div>
                     <div class="content">
-                    <?php echo wp_get_attachment_image(69); ?>
-                    <?php the_field('token', 21); ?> GOLD
+                        <?php echo wp_get_attachment_image(69); ?>
+                        <span><?php the_field('token', 21); ?></span> GOLD
+                        <div class="linkToken">
+                            <a href="https://wowtokenprices.com/EU">Historique</a>
+                        </div>
                     </div>
                 </section>
                 <section class="wowitems">
                     <div class="img">
-                        <a href="https://eu.gear.blizzard.com/collections/world-of-warcraft">Buy & Sell WoW Items</a>
+                        <a href="https://eu.gear.blizzard.com/collections/world-of-warcraft">Buy WoW Items</a>
                     </div>
                 </section>
                 <section class="popularPosts">
@@ -167,7 +192,7 @@
                             <?php while ($popularPost->have_posts()) : $popularPost->the_post(); ?>
                                 <img src="<?php the_post_thumbnail_url() ?>" class="imgPopular" alt="image des articles populaires">
                                 <div class="textContent">
-                                    <?php echo the_title() ?>
+                                    <a href="<?php the_permalink() ?>"><?php the_title(); ?></a>
                                     <div class="flexInfo">
                                         <i class="fa-regular fa-calendar-days"></i><?php the_time('j F, Y'); ?>
                                     </div>

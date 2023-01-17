@@ -31,10 +31,9 @@
             </div>
             <div class="image right" style="background-image: url('<?php the_post_thumbnail_url() ?>')"></div>
         </div>
-        <?php endwhile; 
-        the_posts_pagination( array( 'mid_size' => 2 ) ); 
-        wp_reset_postdata();
-        ?>
+        <?php endwhile;?>
+        <?php the_posts_pagination( array( 'mid_size' => 2 ) ); 
+        wp_reset_postdata();?>
     </section>
 
 </main>

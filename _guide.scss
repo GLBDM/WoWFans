@@ -60,4 +60,16 @@
             display: none;
         }
     }
+    nav{
+        display: flex;
+        justify-content: center;
+        padding: 10vh 0 5vh 0;
+        div{
+            .pagenumbers{
+                background-color: $contrast;
+                color: black;
+                padding: 1rem;
+            }
+        }
+    }
 }

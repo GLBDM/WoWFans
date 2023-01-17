@@ -1,0 +1,14 @@
+.error404{
+    .title{
+        padding: 1.5rem;
+        background-color: $secon;
+        color: #d9d9d9;
+        text-transform: uppercase;
+    }
+    .content{
+        padding: 1.5rem;
+        background-color: $secDark;
+        color: #d9d9d9;
+        border: $secon 1px solid;
+    }
+}

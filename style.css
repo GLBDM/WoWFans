@@ -137,6 +137,11 @@ header nav ul #menu-item-20 a {
 main {
   background-color: #011722;
 }
+main a {
+  text-decoration: none;
+  color: white;
+  font-weight: 700;
+}
 main .background {
   background-image: url("assets/background-min.webp");
   background-repeat: no-repeat;
@@ -185,6 +190,42 @@ main .margin .container .left #recentNewsLeft .card {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+}
+main .margin .container .left #recentNewsLeft .card .category {
+  background-color: #D9C427;
+  padding: 1vh 2vh;
+  position: relative;
+  top: 30px;
+  left: 20px;
+  color: black;
+}
+main .margin .container .left #recentNewsLeft .card .linkcard {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+main .margin .container .left #recentNewsLeft .card .linkcard .contentText {
+  display: none;
+}
+main .margin .container .left #recentNewsLeft .card .linkcard:hover {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  background: linear-gradient(0deg, #000000 0%, rgba(0, 0, 0, 0.85) 7.17%, rgba(0, 0, 0, 0.676531) 12.91%, rgba(0, 0, 0, 0.457115) 18.64%, rgba(0, 0, 0, 0.243795) 24.22%, rgba(0, 0, 0, 0) 30.59%);
+}
+main .margin .container .left #recentNewsLeft .card .linkcard:hover .contentText {
+  display: block;
+  padding: 2rem;
+}
+main .margin .container .left #recentNewsLeft .card .linkcard:hover .contentText h2 {
+  padding-bottom: 1.5vh;
+  font-size: 2rem;
+}
+main .margin .container .left #recentNewsLeft .card .linkcard:hover .contentText .flexInfo {
+  gap: 2rem;
 }
 @media only screen and (max-width: 768px) {
   main .margin .container .left #recentNewsLeft {
@@ -242,11 +283,15 @@ main .margin .container .left .news .content .article .flexInfo {
   align-items: center;
   justify-content: space-around;
   margin-bottom: 3vh;
+  margin-top: 2vh;
 }
 @media only screen and (max-width: 768px) {
   main .margin .container .left .news .content .article .flexInfo {
     width: 100%;
   }
+}
+main .margin .container .left .news .content .article a {
+  font-size: 1.5rem;
 }
 main .margin .container .left .news .content .article .extrait p {
   text-align: justify;
@@ -258,6 +303,15 @@ main .margin .container .left .news .content hr {
 main .margin .container .left .news .content p a {
   color: #d9d9d9;
   text-align: center;
+}
+main .margin .container .left .news .morePost {
+  border-top: 2px #1B5962 solid;
+  margin-top: 5vh;
+  padding-top: 4vh;
+  text-align: center;
+}
+main .margin .container .left .news .morePost a {
+  text-transform: uppercase;
 }
 main .margin .container .left .guide .title {
   padding: 1.5rem;
@@ -273,19 +327,44 @@ main .margin .container .left .guide .content {
 }
 main .margin .container .left .guide .content .guide {
   display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 2vh;
 }
 main .margin .container .left .guide .content .guide .img {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  width: 100%;
+  width: 35%;
+  height: 30vh;
+}
+main .margin .container .left .guide .content .guide .img span {
+  background-color: #D9C427;
+  padding: 1vh 2vh;
+  position: relative;
+  top: 30px;
+  left: -17px;
+  color: black;
+}
+main .margin .container .left .guide .content .guide .information {
+  width: 60%;
 }
 main .margin .container .left .guide .content .guide .information .flexInfo {
   display: flex;
-  width: 40%;
+  width: 50%;
   align-items: center;
   justify-content: space-evenly;
-  margin-bottom: 3vh;
+  gap: 2rem;
+  margin-top: 2vh;
+}
+main .margin .container .left .guide .morePost {
+  border-top: 2px #1B5962 solid;
+  margin-top: 5vh;
+  padding-top: 4vh;
+  text-align: center;
+}
+main .margin .container .left .guide .morePost a {
+  text-transform: uppercase;
 }
 main .margin .container .right {
   width: 31%;
@@ -312,6 +391,42 @@ main .margin .container .right #recentNewsRight .card {
   background-position: center;
   background-size: cover;
 }
+main .margin .container .right #recentNewsRight .card .category {
+  background-color: #D9C427;
+  padding: 1vh 2vh;
+  position: relative;
+  top: 30px;
+  left: 20px;
+  color: black;
+}
+main .margin .container .right #recentNewsRight .card .linkcard {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+main .margin .container .right #recentNewsRight .card .linkcard .contentText {
+  display: none;
+}
+main .margin .container .right #recentNewsRight .card .linkcard:hover {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  background: linear-gradient(0deg, #000000 0%, rgba(0, 0, 0, 0.85) 7.17%, rgba(0, 0, 0, 0.676531) 12.91%, rgba(0, 0, 0, 0.457115) 18.64%, rgba(0, 0, 0, 0.243795) 24.22%, rgba(0, 0, 0, 0) 30.59%);
+}
+main .margin .container .right #recentNewsRight .card .linkcard:hover .contentText {
+  display: block;
+  padding: 2rem;
+}
+main .margin .container .right #recentNewsRight .card .linkcard:hover .contentText h2 {
+  padding-bottom: 1.5vh;
+  font-size: 1.5rem;
+}
+main .margin .container .right #recentNewsRight .card .linkcard:hover .contentText .flexInfo {
+  gap: 1rem;
+}
 @media only screen and (max-width: 768px) {
   main .margin .container .right #recentNewsRight {
     display: none;
@@ -326,13 +441,24 @@ main .margin .container .right .wowtoken .title {
 main .margin .container .right .wowtoken .content {
   padding: 1.5rem;
   background-color: #153F5D;
-  color: #d9d9d9;
+  color: #D9C427;
   border: #1B5962 1px solid;
   text-align: center;
 }
 main .margin .container .right .wowtoken .content .attachment-thumbnail {
   display: block;
-  margin: auto;
+  margin: auto auto 3vh auto;
+}
+main .margin .container .right .wowtoken .content span {
+  font-size: 1.5rem;
+}
+main .margin .container .right .wowtoken .content .linkToken {
+  border-top: 2px #1B5962 solid;
+  padding-top: 2vh;
+  margin-top: 2vh;
+}
+main .margin .container .right .wowtoken .content .linkToken a {
+  text-transform: uppercase;
 }
 main .margin .container .right .wowitems .img {
   background: linear-gradient(7.42deg, #000000 -9.57%, rgba(0, 0, 0, 0) 86.73%), url("/wowfans/wp-content/uploads/2022/12/venteachatwow.jpg");
@@ -341,6 +467,16 @@ main .margin .container .right .wowitems .img {
   background-size: cover;
   height: 60vh;
   width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+main .margin .container .right .wowitems .img a {
+  background-color: #D9C427;
+  color: black;
+  padding: 4vh;
+  font-size: 2rem;
+  text-transform: uppercase;
 }
 main .margin .container .right .popularPosts .title {
   padding: 1.5rem;
@@ -461,6 +597,16 @@ main .margin .container .right .youtube .content {
 }
 .backgroundGuide .newsGuide:nth-child(2n+2) .right {
   display: none;
+}
+.backgroundGuide nav {
+  display: flex;
+  justify-content: center;
+  padding: 10vh 0 5vh 0;
+}
+.backgroundGuide nav div .pagenumbers {
+  background-color: #D9C427;
+  color: black;
+  padding: 1rem;
 }
 
 #blog .margin .container .left {
@@ -616,6 +762,19 @@ main .margin .container .right .youtube .content {
   margin-bottom: 2vh;
 }
 
+.error404 .title {
+  padding: 1.5rem;
+  background-color: #1B5962;
+  color: #d9d9d9;
+  text-transform: uppercase;
+}
+.error404 .content {
+  padding: 1.5rem;
+  background-color: #153F5D;
+  color: #d9d9d9;
+  border: #1B5962 1px solid;
+}
+
 footer .socialNetwork {
   background-color: #1B5962;
   display: flex;
@@ -641,10 +800,14 @@ footer .socialNetwork .fa-brands p {
 footer .CGU {
   text-align: center;
   background-color: black;
-  font-size: 1rem;
-  text-transform: uppercase;
-  color: #d9d9d9;
   padding: 5vh 0;
+}
+footer .CGU a {
+  color: #d9d9d9;
+  text-transform: uppercase;
+  font-weight: 700;
+  text-decoration: none;
+  font-size: 1rem;
 }
 
 * {

@@ -19,7 +19,7 @@
             </section>
 
             <section class="CGU">
-                <p>Conditions général d'utilisation</p>
+                <a href="<?php the_permalink(3) ?>">Conditions général d'utilisation</a>
             </section>
 
 
