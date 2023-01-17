@@ -1,0 +1,43 @@
+#blog{
+    .margin{
+        .container{
+            .left{
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+                .card{
+                    width: 48%;
+                    margin-bottom: 5vh;
+                    color: #d9d9d9;
+                    .imgBlog{
+                        max-width: 100%;
+                    }
+                    h2{
+                        font-size: 1.3rem;
+                    }
+                    .flexInfo{
+                        display: flex;
+                        gap: 1.2rem;
+                        margin: 1.5vh 0 2.5vh 0;
+                    }
+                }
+            }
+            .right{
+                .categories{
+                    .title{
+                        padding: 1.5rem;
+                        background-color: $secon;
+                        color: #d9d9d9;
+                        text-transform: uppercase;
+                    }
+                    .content{
+                        padding: 1.5rem;
+                        background-color: $secDark;
+                        color: #d9d9d9;
+                        border: $secon 1px solid;
+                    }
+                }
+            }
+        }
+    }
+}

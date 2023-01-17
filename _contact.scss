@@ -1,0 +1,63 @@
+.left{
+    .contact{
+        .title{
+            padding: 1.5rem;
+            background-color: $secon;
+            color: #d9d9d9;
+            text-transform: uppercase;
+        }
+        .content{
+            padding: 1.5rem;
+            background-color: $secDark;
+            color: #d9d9d9;
+            border: $secon 1px solid;
+            form{
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                flex-wrap: wrap;
+                label{
+                    input{
+                        width: 70%;
+                        background-color: $secon;
+                        border: 2px solid $prim;
+                        padding: 1.5vh;
+                        font-size: 1rem;
+                        color: white;
+                        &::placeholder{
+                            color: white;
+                        }
+                    }
+                    textarea{
+                        background-color: $secon;
+                        border: 2px solid $prim;
+                        padding: 1.5vh;
+                        resize: none;
+                        &::placeholder{
+                            color: white;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+.right{
+    .contactInfo{
+        .title{
+            padding: 1.5rem;
+            background-color: $secon;
+            color: #d9d9d9;
+            text-transform: uppercase;
+        }
+        .content{
+            padding: 1.5rem;
+            background-color: $secDark;
+            color: #d9d9d9;
+            border: $secon 1px solid;
+            div{
+                margin-bottom: 2vh;
+            }
+        }
+    }
+}

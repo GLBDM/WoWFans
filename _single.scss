@@ -1,0 +1,54 @@
+.article{
+    .title{
+        padding: 1.5rem;
+        background-color: $secon;
+        color: #d9d9d9;
+        text-transform: uppercase;
+    }
+    .content{
+        padding: 1.5rem;
+        background-color: $secDark;
+        color: #d9d9d9;
+        border: $secon 1px solid;
+        img{
+            width: 100%;
+        }
+        .flexInfo{
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-top: 3.5rem;
+            span{
+                background-color: $contrast;
+                color: black;
+                padding: 0.5rem 1.2rem;
+                text-transform: uppercase;
+                text-decoration: none;
+                font-weight: 700;
+            }
+        }
+        .text{
+            text-align: justify;
+            padding: 5vh 0 10vh 0;
+            border-bottom: $secon 3px solid;
+            line-height: 18px;
+            p{
+                margin: 2.5vh 0;
+            }
+        }
+    }
+}
+.author{
+    .title{
+        padding: 1.5rem;
+        background-color: $secon;
+        color: #d9d9d9;
+        text-transform: uppercase;
+    }
+    .content{
+        padding: 1.5rem;
+        background-color: $secDark;
+        color: #d9d9d9;
+        border: $secon 1px solid;
+    }
+}

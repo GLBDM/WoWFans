@@ -31,3 +31,57 @@ header{
         }
     }
 }
+
+.mobile{
+    display: none;
+}
+
+@media only screen and (max-width: 768px ) {
+    .desktop{
+        display: none;
+    }
+
+    header{
+        padding: 0;
+    }
+    .mobile{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .title{
+            color:black;
+            background-color: $contrast;
+            padding: 3vh 2vw;
+            font-family: 'Josefin Sans', sans-serif;
+            font-size: 2.5vh;
+            font-weight: 700;
+            text-transform: uppercase;
+            text-decoration: none;
+        }
+        .icon{
+            position: absolute;
+            right: 20px;
+            top: 15px;
+            font-size: 2rem;
+            color: black;
+        }
+        #myLinks{
+            display: none;
+            nav{
+                z-index: 1;
+                position: absolute;
+                right: 0;
+                top: 65px;
+                width: 100%;
+                ul{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-end;
+                    justify-content: center;
+                    background-color: $secon;
+                    padding: 5vw 5vw;
+                } 
+            }
+        }
+    }
+}
