@@ -250,9 +250,27 @@ main .margin .container .left .recentNewsMobile {
     background-position: center;
     background-size: cover;
   }
+  main .margin .container .left .recentNewsMobile .card .linkcard {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column-reverse;
+    background: linear-gradient(0deg, #000000 0%, rgba(0, 0, 0, 0.85) 7.17%, rgba(0, 0, 0, 0.676531) 12.91%, rgba(0, 0, 0, 0.457115) 18.64%, rgba(0, 0, 0, 0.243795) 24.22%, rgba(0, 0, 0, 0) 30.59%);
+  }
+  main .margin .container .left .recentNewsMobile .card .linkcard .contentText {
+    display: block;
+    padding: 2rem;
+  }
+  main .margin .container .left .recentNewsMobile .card .linkcard .contentText h2 {
+    padding-bottom: 1.5vh;
+    font-size: 2rem;
+  }
+  main .margin .container .left .recentNewsMobile .card .linkcard .contentText .flexInfo {
+    gap: 5rem;
+  }
 }
 main .margin .container .left .news {
-  margin-bottom: 2vh;
+  margin-bottom: 5vh;
 }
 main .margin .container .left .news .title {
   padding: 1.5rem;
@@ -285,6 +303,16 @@ main .margin .container .left .news .content .article .flexInfo {
   margin-bottom: 3vh;
   margin-top: 2vh;
 }
+main .margin .container .left .news .content .article .flexInfo .category {
+  background-color: #D9C427;
+  padding: 1vh 2vh;
+  color: black;
+}
+@media only screen and (max-width: 768px) {
+  main .margin .container .left .news .content .article .flexInfo .category {
+    display: none;
+  }
+}
 @media only screen and (max-width: 768px) {
   main .margin .container .left .news .content .article .flexInfo {
     width: 100%;
@@ -292,6 +320,9 @@ main .margin .container .left .news .content .article .flexInfo {
 }
 main .margin .container .left .news .content .article a {
   font-size: 1.5rem;
+}
+main .margin .container .left .news .content .article a:hover {
+  color: #D9C427;
 }
 main .margin .container .left .news .content .article .extrait p {
   text-align: justify;
@@ -304,6 +335,9 @@ main .margin .container .left .news .content p a {
   color: #d9d9d9;
   text-align: center;
 }
+main .margin .container .left .news .content p a:hover {
+  color: #D9C427;
+}
 main .margin .container .left .news .morePost {
   border-top: 2px #1B5962 solid;
   margin-top: 5vh;
@@ -312,6 +346,12 @@ main .margin .container .left .news .morePost {
 }
 main .margin .container .left .news .morePost a {
   text-transform: uppercase;
+}
+main .margin .container .left .news .morePost a:hover {
+  color: #D9C427;
+}
+main .margin .container .left .guide {
+  margin-bottom: 5vh;
 }
 main .margin .container .left .guide .title {
   padding: 1.5rem;
@@ -331,12 +371,24 @@ main .margin .container .left .guide .content .guide {
   justify-content: space-between;
   margin-bottom: 2vh;
 }
+@media only screen and (max-width: 768px) {
+  main .margin .container .left .guide .content .guide {
+    width: 100%;
+    flex-direction: column;
+  }
+}
 main .margin .container .left .guide .content .guide .img {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   width: 35%;
   height: 30vh;
+}
+@media only screen and (max-width: 768px) {
+  main .margin .container .left .guide .content .guide .img {
+    width: 100%;
+    margin-bottom: 2vh;
+  }
 }
 main .margin .container .left .guide .content .guide .img span {
   background-color: #D9C427;
@@ -349,6 +401,11 @@ main .margin .container .left .guide .content .guide .img span {
 main .margin .container .left .guide .content .guide .information {
   width: 60%;
 }
+@media only screen and (max-width: 768px) {
+  main .margin .container .left .guide .content .guide .information {
+    width: 100%;
+  }
+}
 main .margin .container .left .guide .content .guide .information .flexInfo {
   display: flex;
   width: 50%;
@@ -356,6 +413,11 @@ main .margin .container .left .guide .content .guide .information .flexInfo {
   justify-content: space-evenly;
   gap: 2rem;
   margin-top: 2vh;
+}
+@media only screen and (max-width: 768px) {
+  main .margin .container .left .guide .content .guide .information .flexInfo {
+    width: 100%;
+  }
 }
 main .margin .container .left .guide .morePost {
   border-top: 2px #1B5962 solid;
@@ -365,6 +427,9 @@ main .margin .container .left .guide .morePost {
 }
 main .margin .container .left .guide .morePost a {
   text-transform: uppercase;
+}
+main .margin .container .left .guide .morePost a:hover {
+  color: #D9C427;
 }
 main .margin .container .right {
   width: 31%;
@@ -460,6 +525,9 @@ main .margin .container .right .wowtoken .content .linkToken {
 main .margin .container .right .wowtoken .content .linkToken a {
   text-transform: uppercase;
 }
+main .margin .container .right .wowtoken .content .linkToken a:hover {
+  color: #D9C427;
+}
 main .margin .container .right .wowitems .img {
   background: linear-gradient(7.42deg, #000000 -9.57%, rgba(0, 0, 0, 0) 86.73%), url("/wowfans/wp-content/uploads/2022/12/venteachatwow.jpg");
   background-position: center;
@@ -478,6 +546,9 @@ main .margin .container .right .wowitems .img a {
   font-size: 2rem;
   text-transform: uppercase;
 }
+main .margin .container .right .wowitems .img a:hover {
+  color: #D9C427;
+}
 main .margin .container .right .popularPosts .title {
   padding: 1.5rem;
   background-color: #1B5962;
@@ -489,17 +560,25 @@ main .margin .container .right .popularPosts .content {
   background-color: #153F5D;
   color: #d9d9d9;
   border: #1B5962 1px solid;
+}
+main .margin .container .right .popularPosts .content .popularPost {
   display: flex;
-  flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
+  margin-bottom: 2vh;
 }
-main .margin .container .right .popularPosts .content .imgPopular {
+@media only screen and (max-width: 768px) {
+  main .margin .container .right .popularPosts .content .popularPost {
+    flex-direction: column;
+  }
+}
+main .margin .container .right .popularPosts .content .popularPost .imgPopular {
   width: 50%;
 }
 @media only screen and (max-width: 768px) {
-  main .margin .container .right .popularPosts .content .imgPopular {
+  main .margin .container .right .popularPosts .content .popularPost .imgPopular {
     width: 100%;
+    margin-bottom: 2vh;
   }
 }
 main .margin .container .right .live .title {
@@ -562,6 +641,11 @@ main .margin .container .right .youtube .content {
   margin-bottom: 1.5vh;
   font-size: 1.5rem;
 }
+@media only screen and (max-width: 768px) {
+  .backgroundGuide .newsGuide .content .realContent h2 {
+    text-align: center;
+  }
+}
 .backgroundGuide .newsGuide .content .realContent .flexContent {
   display: flex;
   align-items: center;
@@ -585,12 +669,22 @@ main .margin .container .right .youtube .content {
   text-transform: uppercase;
   text-decoration: none;
 }
+@media only screen and (max-width: 768px) {
+  .backgroundGuide .newsGuide .content .realContent :nth-child(n+2) {
+    display: none;
+  }
+}
 .backgroundGuide .newsGuide .image {
   height: 70vh;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   width: 50%;
+}
+@media only screen and (max-width: 768px) {
+  .backgroundGuide .newsGuide .image {
+    height: 30vh;
+  }
 }
 .backgroundGuide .newsGuide:nth-child(2n+1) .left {
   display: none;
@@ -603,10 +697,24 @@ main .margin .container .right .youtube .content {
   justify-content: center;
   padding: 10vh 0 5vh 0;
 }
-.backgroundGuide nav div .pagenumbers {
+.backgroundGuide nav div {
+  display: flex;
+  gap: 1rem;
+}
+.backgroundGuide nav div .page-numbers {
+  border: 1px #D9C427 solid;
+  color: white;
+  padding: 1rem 1.2rem;
+  transition: 0.3s;
+}
+.backgroundGuide nav div .page-numbers:hover {
   background-color: #D9C427;
   color: black;
-  padding: 1rem;
+}
+.backgroundGuide nav div .current {
+  background-color: #D9C427;
+  color: black;
+  padding: 1rem 1.2rem;
 }
 
 #blog .margin .container .left {
@@ -614,10 +722,21 @@ main .margin .container .right .youtube .content {
   flex-wrap: wrap;
   justify-content: space-between;
 }
+@media only screen and (max-width: 768px) {
+  #blog .margin .container .left {
+    flex-direction: column;
+    align-items: center;
+  }
+}
 #blog .margin .container .left .card {
   width: 48%;
   margin-bottom: 5vh;
   color: #d9d9d9;
+}
+@media only screen and (max-width: 768px) {
+  #blog .margin .container .left .card {
+    width: 100%;
+  }
 }
 #blog .margin .container .left .card .imgBlog {
   max-width: 100%;
@@ -629,6 +748,30 @@ main .margin .container .right .youtube .content {
   display: flex;
   gap: 1.2rem;
   margin: 1.5vh 0 2.5vh 0;
+}
+#blog .margin .container .left nav {
+  display: flex;
+  justify-content: center;
+  padding: 10vh 0 5vh 0;
+}
+#blog .margin .container .left nav div {
+  display: flex;
+  gap: 1rem;
+}
+#blog .margin .container .left nav div .page-numbers {
+  border: 1px #D9C427 solid;
+  color: white;
+  padding: 1rem 1.2rem;
+  transition: 0.3s;
+}
+#blog .margin .container .left nav div .page-numbers:hover {
+  background-color: #D9C427;
+  color: black;
+}
+#blog .margin .container .left nav div .current {
+  background-color: #D9C427;
+  color: black;
+  padding: 1rem 1.2rem;
 }
 #blog .margin .container .right .categories .title {
   padding: 1.5rem;
@@ -654,6 +797,7 @@ main .margin .container .right .youtube .content {
   background-color: #153F5D;
   color: #d9d9d9;
   border: #1B5962 1px solid;
+  margin-bottom: 2vh;
 }
 .article .content img {
   width: 100%;
@@ -672,6 +816,11 @@ main .margin .container .right .youtube .content {
   text-decoration: none;
   font-weight: 700;
 }
+@media only screen and (max-width: 768px) {
+  .article .content .flexInfo span {
+    display: none;
+  }
+}
 .article .content .text {
   text-align: justify;
   padding: 5vh 0 10vh 0;
@@ -682,6 +831,11 @@ main .margin .container .right .youtube .content {
   margin: 2.5vh 0;
 }
 
+@media only screen and (max-width: 768px) {
+  .author {
+    margin-bottom: 2vh;
+  }
+}
 .author .title {
   padding: 1.5rem;
   background-color: #1B5962;
@@ -694,7 +848,33 @@ main .margin .container .right .youtube .content {
   color: #d9d9d9;
   border: #1B5962 1px solid;
 }
+.author .authorContent {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+@media only screen and (max-width: 768px) {
+  .author .authorContent {
+    flex-direction: column;
+  }
+}
+.author .authorContent .textContent {
+  width: 70%;
+}
+@media only screen and (max-width: 768px) {
+  .author .authorContent .textContent {
+    width: 100%;
+  }
+}
+.author .authorContent .textContent h3 {
+  font-size: 3rem;
+  margin-bottom: 1.2rem;
+  font-family: "Spectral SC", serif;
+}
 
+.left .contact {
+  margin-bottom: 5vh;
+}
 .left .contact .title {
   padding: 1.5rem;
   background-color: #1B5962;
@@ -707,43 +887,72 @@ main .margin .container .right .youtube .content {
   color: #d9d9d9;
   border: #1B5962 1px solid;
 }
-.left .contact .content form {
+.left .contact .content .contactForm {
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
 }
-.left .contact .content form label input {
-  width: 70%;
+.left .contact .content .contactForm .contact-name {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.left .contact .content .contactForm .contact-name input {
+  width: 91%;
+  background-color: #1B5962;
+  border: 2px solid #011722;
+  padding: 1.5vh;
+  margin-bottom: 2vh;
+  font-size: 1rem;
+  color: white;
+}
+.left .contact .content .contactForm .contact-name input::-moz-placeholder {
+  color: white;
+}
+.left .contact .content .contactForm .contact-name input:-ms-input-placeholder {
+  color: white;
+}
+.left .contact .content .contactForm .contact-name input::placeholder {
+  color: white;
+}
+.left .contact .content .contactForm .contact-message {
+  margin-bottom: 2vh;
+}
+.left .contact .content .contactForm .contact-message textarea {
   background-color: #1B5962;
   border: 2px solid #011722;
   padding: 1.5vh;
   font-size: 1rem;
   color: white;
-}
-.left .contact .content form label input::-moz-placeholder {
-  color: white;
-}
-.left .contact .content form label input:-ms-input-placeholder {
-  color: white;
-}
-.left .contact .content form label input::placeholder {
-  color: white;
-}
-.left .contact .content form label textarea {
-  background-color: #1B5962;
-  border: 2px solid #011722;
-  padding: 1.5vh;
   resize: none;
 }
-.left .contact .content form label textarea::-moz-placeholder {
+.left .contact .content .contactForm .contact-message textarea::-moz-placeholder {
   color: white;
 }
-.left .contact .content form label textarea:-ms-input-placeholder {
+.left .contact .content .contactForm .contact-message textarea:-ms-input-placeholder {
   color: white;
 }
-.left .contact .content form label textarea::placeholder {
+.left .contact .content .contactForm .contact-message textarea::placeholder {
   color: white;
+}
+.left .contact .content .contactForm .contact-validate input {
+  border: 2px solid #011722;
+  padding: 1.5vh;
+  margin-bottom: 2vh;
+  font-size: 1rem;
+  color: white;
+  background-color: #153F5D;
+  cursor: pointer;
+}
+.left .contact .content .contactForm .contact-validate input:hover {
+  background-color: #D9C427;
+  color: black;
+}
+.left form .wpcf7-response-output {
+  padding: 1.5rem;
+  background-color: #153F5D;
+  color: #d9d9d9;
+  border: #1B5962 1px solid;
 }
 
 .right .contactInfo .title {
@@ -760,6 +969,10 @@ main .margin .container .right .youtube .content {
 }
 .right .contactInfo .content div {
   margin-bottom: 2vh;
+}
+
+.map {
+  height: 50vh;
 }
 
 .error404 .title {
@@ -812,4 +1025,8 @@ footer .CGU a {
 
 * {
   font-family: "Josefin Sans", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
 }/*# sourceMappingURL=style.css.map */

@@ -35,27 +35,32 @@
             <div class="right">
                 
                 <section class="popularPosts">
-                    <?php $args = array(
-                        'orderby' => 'comment_count',
-                        'posts_per_page' => 5,);
-                    $popularPost = new WP_Query( $args ); ?>
+                    <?php
+                        $args = array(
+                            'orderby' => 'comment_count',
+                            'posts_per_page' => 5,
+                            );
+                        $popularPost = new WP_Query( $args );
+                    ?>
                     <div class="title">
                         <h2>Popular Posts</h2>
                     </div>
                     <div class="content">
                         <?php while ($popularPost->have_posts()) : $popularPost->the_post(); ?>
-                            <img src="<?php the_post_thumbnail_url() ?>" class="imgPopular" alt="image des articles populaires">
-                            <div class="textContent">
-                                <?php echo the_title() ?>
-                                <div class="flexInfo">
-                                    <i class="fa-regular fa-calendar-days"></i><?php the_time('j F, Y'); ?>
+                            <div class="popularPost">
+                                <img src="<?php the_post_thumbnail_url() ?>" class="imgPopular" alt="image des articles populaires">
+                                <div class="textContent">
+                                    <a href="<?php the_permalink() ?>"><?php the_title(); ?></a>
+                                    <div class="flexInfo">
+                                        <i class="fa-regular fa-calendar-days"></i><?php the_time('j F, Y'); ?>
+                                    </div>
                                 </div>
                             </div>
                         <?php endwhile; ?>
                     </div>
                 </section>
 
-                <section class="comments">
+                <!-- <section class="comments">
                     <div class="title">
                         <h2>Latest comments</h2>
                     </div>
@@ -71,7 +76,7 @@
                         
                         ?>
                     </div>
-                </section>
+                </section> -->
             </div>
         </div>
     </div>

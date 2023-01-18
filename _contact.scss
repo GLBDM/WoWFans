@@ -1,5 +1,6 @@
 .left{
     .contact{
+        margin-bottom: 5vh;
         .title{
             padding: 1.5rem;
             background-color: $secon;
@@ -11,34 +12,65 @@
             background-color: $secDark;
             color: #d9d9d9;
             border: $secon 1px solid;
-            form{
+            .contactForm{
                 display: flex;
+                flex-direction: column;
                 align-items: center;
-                justify-content: space-between;
-                flex-wrap: wrap;
-                label{
+                .contact-name{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
                     input{
-                        width: 70%;
+                        width: 91%;
                         background-color: $secon;
                         border: 2px solid $prim;
                         padding: 1.5vh;
+                        margin-bottom: 2vh;
                         font-size: 1rem;
                         color: white;
                         &::placeholder{
                             color: white;
                         }
                     }
+                }
+                .contact-message{
+                    margin-bottom: 2vh;
                     textarea{
                         background-color: $secon;
                         border: 2px solid $prim;
                         padding: 1.5vh;
+                        font-size: 1rem;
+                        color: white;
                         resize: none;
                         &::placeholder{
                             color: white;
                         }
                     }
                 }
+                .contact-validate{
+                    input{
+                        border: 2px solid $prim;
+                        padding: 1.5vh;
+                        margin-bottom: 2vh;
+                        font-size: 1rem;
+                        color: white;
+                        background-color: $secDark;
+                        cursor: pointer;
+                        &:hover{
+                            background-color: $contrast;
+                            color: black;
+                        }
+                    }
+                }
             }
+        }
+    }
+    form{
+        .wpcf7-response-output{
+            padding: 1.5rem;
+            background-color: $secDark;
+            color: #d9d9d9;
+            border: $secon 1px solid;
         }
     }
 }
@@ -60,4 +92,8 @@
             }
         }
     }
+}
+
+.map{
+    height: 50vh;
 }

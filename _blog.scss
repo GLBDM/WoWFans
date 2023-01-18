@@ -5,8 +5,15 @@
                 display: flex;
                 flex-wrap: wrap;
                 justify-content: space-between;
+                @media only screen and (max-width: 768px) {
+                    flex-direction: column;
+                    align-items: center;
+                }
                 .card{
                     width: 48%;
+                    @media only screen and (max-width: 768px) {
+                        width: 100%;
+                    }
                     margin-bottom: 5vh;
                     color: #d9d9d9;
                     .imgBlog{
@@ -19,6 +26,30 @@
                         display: flex;
                         gap: 1.2rem;
                         margin: 1.5vh 0 2.5vh 0;
+                    }
+                }
+                nav{
+                    display: flex;
+                    justify-content: center;
+                    padding: 10vh 0 5vh 0;
+                    div{
+                        display: flex;
+                        gap: 1rem;
+                        .page-numbers{
+                            border: 1px $contrast solid;
+                            color: white;
+                            padding: 1rem 1.2rem;
+                            transition: 0.3s;
+                            &:hover{
+                                background-color: $contrast;
+                                color: black;
+                            }
+                        }
+                        .current{
+                            background-color: $contrast;
+                            color: black;
+                            padding: 1rem 1.2rem;
+                        }
                     }
                 }
             }

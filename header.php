@@ -9,13 +9,13 @@
 </head>
 
 <body>
-    <header class="desktop">
+    <header class="desktop" id="header">
         <?php wp_nav_menu(array(
         'theme_location' => 'menu-desktop',
         'container' => 'nav')); ?>
     </header>
 
-    <header class="mobile">
+    <header class="mobile" id="header">
         <a class="title" href="<?php bloginfo('url') ; ?>">WoWFans</a>
         <span class="icon" onclick="myFunction()">
             <i class="fa fa-bars"></i>

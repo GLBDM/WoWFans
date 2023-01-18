@@ -21,7 +21,7 @@
                             <span class="category"><?php echo $category[0]->cat_name;; ?></span>
                             <a href="<?php the_permalink() ?>" class="linkcard">
                                 <div class="contentText">
-                                <h2><?php the_title(); ?></h2>
+                                    <h2><?php the_title(); ?></h2>
                                     <div class="flexInfo">
                                         <i class="fa-regular fa-calendar-days"></i><?php the_time('j F, Y'); ?>
                                         <span><i class="fa-solid fa-message"></i><?php echo $totalcomments; ?><span>
@@ -43,11 +43,17 @@
                         <?php while ($recentPosts->have_posts()) : $recentPosts->the_post(); ?>
                         <?php $totalcomments = get_comments_number(); ?>
 
-                            <div class="card" style="background-image: url('<?php the_post_thumbnail_url() ?>')">
-                                <a href="<?php the_permalink() ?>"><?php the_title(); ?></a>
-                                <i class="fa-regular fa-calendar-days"></i><?php the_time('j F, Y'); ?>
-                                <span><i class="fa-solid fa-message"></i><?php echo $totalcomments; ?><span>
-                            </div>
+                        <div class="card" style="background-image: url('<?php the_post_thumbnail_url() ?>')">
+                            <a href="<?php the_permalink() ?>" class="linkcard">
+                                <div class="contentText">
+                                    <h2><?php the_title(); ?></h2>
+                                    <div class="flexInfo">
+                                        <i class="fa-regular fa-calendar-days"></i><?php the_time('j F, Y'); ?>
+                                        <span><i class="fa-solid fa-message"></i><?php echo $totalcomments; ?><span>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
 
                         <?php endwhile; ?>
 
@@ -66,13 +72,14 @@
                         );
                         $recentPosts = new WP_Query($args); ?>
                         <?php while ($recentPosts->have_posts()) : $recentPosts->the_post(); ?>
-                        <?php $totalcomments = get_comments_number(); ?>
+                        <?php $totalcomments = get_comments_number();
+                        $category = get_the_category(); ?>
                             <div class="article">
                                 <img src="<?php the_post_thumbnail_url() ?>" class="img" alt="image des news">
                                 <a href="<?php the_permalink() ?>"><?php the_title(); ?></a>
 
                                 <div class="flexInfo">
-                                    <span></span>
+                                    <span class="category"><?php echo $category[0]->cat_name;; ?></span>
                                     <i class="fa-regular fa-calendar-days"></i><p><?php the_time('j F, Y'); ?></p>
                                     <i class="fa-solid fa-message"></i><p><?php echo $totalcomments; ?></p>
                                     <i class="fa-solid fa-user"></i><p><?php the_author();?></p>
@@ -178,18 +185,19 @@
                     </div>
                 </section>
                 <section class="popularPosts">
-                        <?php
-                            $args = array(
-                                'orderby' => 'comment_count',
-                                'posts_per_page' => 5,
-                              );
-                            $popularPost = new WP_Query( $args );
-                        ?>
-                        <div class="title">
-                            <h2>Popular Posts</h2>
-                        </div>
-                        <div class="content">
-                            <?php while ($popularPost->have_posts()) : $popularPost->the_post(); ?>
+                    <?php
+                        $args = array(
+                            'orderby' => 'comment_count',
+                            'posts_per_page' => 5,
+                            );
+                        $popularPost = new WP_Query( $args );
+                    ?>
+                    <div class="title">
+                        <h2>Popular Posts</h2>
+                    </div>
+                    <div class="content">
+                        <?php while ($popularPost->have_posts()) : $popularPost->the_post(); ?>
+                            <div class="popularPost">
                                 <img src="<?php the_post_thumbnail_url() ?>" class="imgPopular" alt="image des articles populaires">
                                 <div class="textContent">
                                     <a href="<?php the_permalink() ?>"><?php the_title(); ?></a>
@@ -197,8 +205,9 @@
                                         <i class="fa-regular fa-calendar-days"></i><?php the_time('j F, Y'); ?>
                                     </div>
                                 </div>
-                            <?php endwhile; ?>
-                        </div>
+                            </div>
+                        <?php endwhile; ?>
+                    </div>
                 </section>
                 <!-- <section class="live">
                     <div class="title">

@@ -22,7 +22,11 @@
                 <a href="<?php the_permalink(3) ?>">Conditions général d'utilisation</a>
             </section>
 
-
+            <section class="CGU">
+                <a href="#header">
+                    <i class="fa-solid fa-arrow-up"></i>
+                </a>
+            </section>
 
 
 
